@@ -1,0 +1,4 @@
+SELECT city, sum(basket) / count(order_id) as AVERAGE FROM `bi-2019-test.ad_hoc.orders_jan2021`
+group by city
+having count(order_id) > 500
+order by AVERAGE desc

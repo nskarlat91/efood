@@ -1,6 +1,6 @@
 # Efood Challenge
 
-Foobar is a Python library for dealing with word pluralization.
+Python script to analyse the efood challenge dataset
 
 ## Installation
 

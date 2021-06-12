@@ -1,5 +1,0 @@
-SELECT count(distinct(user_id)), city FROM `bi-2019-test.ad_hoc.orders_jan2021`
-where cuisine_parent = "Breakfast"
-group by city
-having count(order_id) > 500
-order by count(order_id) desc

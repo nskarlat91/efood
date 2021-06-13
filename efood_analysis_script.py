@@ -1,6 +1,6 @@
 # Python script for the efood analysis challenge. The script is using RFM analysis to segment the customer base.
 # Check read me for package installation.
-# author : Skarlatos Nikos
+# author : Skarlatos Nikolaos
 # Date : 13/6/20
 
 import numpy as np
@@ -17,10 +17,6 @@ data_grouped = data.groupby('user_id').agg({'order_id': lambda num: len(num), \
                                      'basket': lambda ordervalue: ordervalue.sum()})
 data_grouped.columns = ['frequency', 'order_value']
 
-# save csv snapshot
-# data2.to_csv(r"C:\Users\NSkarl\Desktop\user.csv")
-# data2 = pd.read_csv(r"C:\Users\NSkarl\Desktop\user.csv")
-
 # show scatter plot
 sns.scatterplot(data_grouped.frequency, data_grouped.order_value)
 plt.show()
@@ -28,9 +24,8 @@ plt.show()
 # show histograms for analysis
 sns.histplot(data_grouped.frequency, bins=20)
 plt.show()
-sns.histplot(data_grouped.order_value, bins = 50)
+sns.histplot(data_grouped.order_value, bins=50)
 plt.show()
-
 
 # perform the FM binning
 data_grouped['f_quartile'] = pd.qcut(data_grouped['frequency'], 4, ['2', '1'], duplicates='drop')

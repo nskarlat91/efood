@@ -11,16 +11,13 @@ Please install numpy, pandas, matplotlib, seaborn
 Ensure the data and paths are correct to your local version.
 
 ## Files
-sql folder  ...
+sql folder : sql code for part I of the assignment. 
 efood_analysis.py : python script to produce graphs and data
 
 
 ## Usage
 ```
-pyton efood_analysis.py
+python efood_analysis.py
 
 ```
 
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/)

@@ -1,4 +1,4 @@
-# Efood Challenge
+## Efood Challenge
 
 Python script to analyse the efood challenge dataset
 
@@ -6,7 +6,7 @@ Python script to analyse the efood challenge dataset
 
 Please install numpy, pandas, matplotlib, seaborn 
 
-# Data Path
+## Data Path
 
 Ensure the data and paths are correct to your local version.
 

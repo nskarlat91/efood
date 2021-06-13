@@ -3,6 +3,7 @@
 # author : Skarlatos Nikolaos
 # Date : 13/6/20
 
+# import libraries
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -11,17 +12,17 @@ import seaborn as sns
 # import data
 data = pd.read_csv("bq-results-20210610-160817-rsvk8j6pyz2z.csv")
 
-# filter specific business case
+# filter & group specific business case
 data = data[data.cuisine_parent == "Breakfast"]
 data_grouped = data.groupby('user_id').agg({'order_id': lambda num: len(num), \
                                      'basket': lambda ordervalue: ordervalue.sum()})
 data_grouped.columns = ['frequency', 'order_value']
 
-# show scatter plot
+# create/show scatter plot
 sns.scatterplot(data_grouped.frequency, data_grouped.order_value)
 plt.show()
 
-# show histograms for analysis
+# create/show histograms for analysis
 sns.histplot(data_grouped.frequency, bins=20)
 plt.show()
 sns.histplot(data_grouped.order_value, bins=50)
